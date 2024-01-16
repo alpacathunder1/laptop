@@ -14,4 +14,4 @@
   ansible.builtin.command: chsh -s /opt/homebrew/bin/fish '{{ ansible_user }}'
   become: true
   when: setshell
-  changed_when: true
+  changed_when: false
