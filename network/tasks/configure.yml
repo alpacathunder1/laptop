@@ -1,4 +1,8 @@
 ---
+- name: Set a hostname
+  become: true
+  ansible.builtin.hostname:
+    name: '{{ hostname }}'
 - name: Copy vpn config file
   become: true
   ansible.builtin.copy:

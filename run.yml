@@ -1,5 +1,7 @@
 ---
 - name: Playbook for lpatop
   hosts: laptop
+  vars_files:
+    - vars/public.yml
   roles:
-    - role: vpn
+    - role: network
