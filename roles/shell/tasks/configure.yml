@@ -18,9 +18,9 @@
 - name: Create fish config directory
   become: false
   ansible.builtin.file:
-    group: '{{ ansible_group }}'
+    group: "{{ ansible_group }}"
     mode: "0755"
-    owner: '{{ ansible_user }}'
+    owner: "{{ ansible_user }}"
     path: ~/.config/fish
     state: directory
 - name: Copy config.fish
@@ -28,6 +28,6 @@
   ansible.builtin.template:
     src: config.fish.j2
     dest: ~/.config/fish/config.fish
-    group: '{{ ansible_group }}'
+    group: "{{ ansible_group }}"
     mode: "0600"
-    owner: '{{ ansible_user }}'
+    owner: "{{ ansible_user }}"

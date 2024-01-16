@@ -6,6 +6,7 @@
     - vars/vault.yml
   roles:
     - role: system
+    - role: editor
     - role: network
     - role: shell
     - role: terminal
