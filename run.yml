@@ -1,0 +1,5 @@
+---
+- name: Playbook for lpatop
+  hosts: laptop
+  roles:
+    - role: vpn

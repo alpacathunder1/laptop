@@ -1,0 +1,10 @@
+---
+- name: Copy vpn config file
+  become: true
+  ansible.builtin.copy:
+    dest: /opt/homebrew/etc/wireguard/Home.conf
+    group: wheel
+    mode: "0400"
+    owner: root
+    decrypt: true
+    src: Home.conf
