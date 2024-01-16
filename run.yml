@@ -3,6 +3,7 @@
   hosts: laptop
   vars_files:
     - vars/public.yml
+    - vars/vault.yml
   roles:
     - role: network
     - role: shell

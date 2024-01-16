@@ -25,9 +25,9 @@
     state: directory
 - name: Copy config.fish
   become: false
-  ansible.builtin.copy:
-    src: config.fish
+  ansible.builtin.template:
+    src: config.fish.j2
     dest: ~/.config/fish/config.fish
     group: '{{ ansible_group }}'
-    mode: "0644"
+    mode: "0600"
     owner: '{{ ansible_user }}'
