@@ -1,3 +1,4 @@
 ---
 hostname: laptop
 ansible_user: alex
+ansible_group: staff

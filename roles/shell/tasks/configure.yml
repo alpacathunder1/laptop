@@ -15,3 +15,19 @@
   become: true
   when: setshell
   changed_when: false
+- name: Create fish config directory
+  become: false
+  ansible.builtin.file:
+    group: '{{ ansible_group }}'
+    mode: "0755"
+    owner: '{{ ansible_user }}'
+    path: ~/.config/fish
+    state: directory
+- name: Copy config.fish
+  become: false
+  ansible.builtin.copy:
+    src: config.fish
+    dest: ~/.config/fish/config.fish
+    group: '{{ ansible_group }}'
+    mode: "0644"
+    owner: '{{ ansible_user }}'
