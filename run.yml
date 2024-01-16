@@ -9,3 +9,4 @@
     - role: network
     - role: shell
     - role: terminal
+    - role: remote_gaming
