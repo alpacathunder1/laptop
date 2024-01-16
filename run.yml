@@ -5,3 +5,4 @@
     - vars/public.yml
   roles:
     - role: network
+    - role: shell

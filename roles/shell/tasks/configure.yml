@@ -1,0 +1,15 @@
+---
+- name: Add fish to shell
+  ansible.builtin.lineinfile:
+    group: wheel
+    mode: "0644"
+    owner: root
+    path: /etc/shells
+    line: /opt/homebrew/bin/fish
+  become: true
+  register: setshell
+- name: Set fish as the default shell
+  ansible.builtin.command: chsh -s /opt/homebrew/bin/fish '{{ ansible_user }}'
+  become: true
+  when: setshell
+  changed_when: true
