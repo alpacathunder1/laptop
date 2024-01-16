@@ -1,0 +1,5 @@
+---
+- name: Configure hostname
+  ansible.builtin.include_tasks: hostname.yml
+- name: Configure sudo
+  ansible.builtin.include_tasks: sudo.yml

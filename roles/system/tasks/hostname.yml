@@ -1,0 +1,5 @@
+---
+- name: Set a hostname specifying strategy
+  ansible.builtin.hostname:
+    name: "{{ hostname }}"
+  become: true

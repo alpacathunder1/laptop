@@ -1,0 +1,12 @@
+---
+- name: Adding pwfeedback
+  become: true
+  ansible.builtin.copy:
+  # Empty characters when typing password
+    content: |
+      Defaults        pwfeedback
+    dest: /etc/sudoers.d/02-pwfeedback
+    group: wheel
+    mode: "0440"
+    owner: root
+    validate: /usr/sbin/visudo -cf %s
