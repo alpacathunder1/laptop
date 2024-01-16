@@ -1,0 +1,17 @@
+---
+- name: Create tmux config directory
+  become: false
+  ansible.builtin.file:
+    group: '{{ ansible_group }}'
+    mode: "0755"
+    owner: '{{ ansible_user }}'
+    path: ~/.config/tmux
+    state: directory
+- name: Copy config.tmux
+  become: false
+  ansible.builtin.copy:
+    src: tmux.conf
+    dest: ~/.config/tmux/tmux.conf
+    group: '{{ ansible_group }}'
+    mode: "0644"
+    owner: '{{ ansible_user }}'
