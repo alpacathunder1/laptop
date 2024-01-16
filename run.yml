@@ -9,4 +9,6 @@
     - role: network
     - role: shell
     - role: terminal
+    - role: browser
+    - role: email_client
     - role: remote_gaming
