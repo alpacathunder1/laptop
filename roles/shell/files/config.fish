@@ -1,3 +1,4 @@
+set fish_greeting
 set -gx PATH "/opt/homebrew/bin:/opt/homebrew/sbin" $PATH
 set -gx EDITOR "nvim"
 set -gx GIT_AUTHOR_EMAIL "ataylor@posteo.us"
