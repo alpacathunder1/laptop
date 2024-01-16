@@ -1,0 +1,12 @@
+---
+- name: Read com.apple.Dock value
+  become: false
+  ansible.builtin.command: defaults read com.apple.Dock autohide
+  register: autohide
+  changed_when: false
+- name: Set dock to autohide
+  become: false
+  ansible.builtin.command: defaults write com.apple.dock autohide -bool TRUE
+  when: autohide.stdout == "0"
+  notify: Kill (and restart) the Dock
+  changed_when: true

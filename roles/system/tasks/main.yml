@@ -3,3 +3,5 @@
   ansible.builtin.include_tasks: hostname.yml
 - name: Configure sudo
   ansible.builtin.include_tasks: sudo.yml
+- name: Configure dock
+  ansible.builtin.include_tasks: dock.yml
