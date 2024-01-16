@@ -1,5 +1,5 @@
 ---
-- name: Read com.apple.Dock value
+- name: Read com.apple.Dock autohide value
   become: false
   ansible.builtin.command: defaults read com.apple.Dock autohide
   register: autohide
@@ -9,4 +9,16 @@
   ansible.builtin.command: defaults write com.apple.dock autohide -bool TRUE
   when: autohide.stdout == "0"
   notify: Kill (and restart) the Dock
+  changed_when: true
+- name: Read com.apple.dock wvous-tl-corner value
+  become: false
+  ansible.builtin.command: defaults read com.apple.dock wvous-tl-corner
+  register: tlcorner
+  changed_when: false
+- name: Set top left corner to Mission Control
+  become: false
+  ansible.builtin.command: defaults write com.apple.dock wvous-tl-corner -int 2
+  when: tlcorner.stdout != "2"
+  # This doesn't seem to apply the change on my machine, but it can't hurt. It could just need a login/logout.
+  notify: Kill (and restart) Finder
   changed_when: true

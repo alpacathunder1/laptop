@@ -4,3 +4,8 @@
   changed_when: true
   ansible.builtin.command:
     cmd: killall Dock
+- name: Kill (and restart) Finder
+  become: true
+  changed_when: true
+  ansible.builtin.command:
+    cmd: killall Finder
