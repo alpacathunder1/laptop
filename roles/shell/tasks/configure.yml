@@ -9,6 +9,8 @@
   become: true
   register: setshell
 - name: Set fish as the default shell
+  ## Modified from
+  ## https://www.talkingquickly.co.uk/2021/01/macos-setup-with-ansible/
   ansible.builtin.command: chsh -s /opt/homebrew/bin/fish '{{ ansible_user }}'
   become: true
   when: setshell
