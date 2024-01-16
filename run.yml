@@ -1,5 +1,5 @@
 ---
-- name: Playbook for lpatop
+- name: Playbook for laptop
   hosts: laptop
   vars_files:
     - vars/public.yml
