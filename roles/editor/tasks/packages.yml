@@ -6,8 +6,3 @@
     state: present
   with_items:
     - railwaycat/emacsmacport/emacs-mac
-- name: Ensure Doom is present
-  ansible.builtin.git:
-    repo: https://github.com/hlissner/doom-emacs
-    dest: ~/.config/emacs
-  notify: Run doom install
