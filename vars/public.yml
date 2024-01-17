@@ -2,3 +2,5 @@
 hostname: laptop
 ansible_user: alex
 ansible_group: staff
+email: ataylor@posteo.us
+fullname: Alex Taylor
