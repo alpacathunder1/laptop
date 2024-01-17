@@ -1,0 +1,10 @@
+---
+- name: Install packages
+  become: false
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - ansible
+    - ansible-lint
+    - bitwarden-cli

@@ -13,3 +13,4 @@
     - role: browser
     - role: email_client
     - role: remote_gaming
+    - role: config_management
