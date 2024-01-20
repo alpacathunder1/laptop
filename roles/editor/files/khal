@@ -7,14 +7,14 @@ color = white
 
 [[holidays]]
 path = ~/.local/share/vdirsyncer/calendars-ro/holidays
-color = "white"
+color = "light red"
 readonly = True
 type = discover
 
 [[birthdays]]
 path = ~/.local/share/vdirsyncer/contacts/default
 readonly = True
-color = "white"
+color = "light magenta"
 type = birthdays
 
 [locale]
