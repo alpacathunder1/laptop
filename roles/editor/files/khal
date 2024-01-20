@@ -12,7 +12,7 @@ readonly = True
 type = discover
 
 [[birthdays]]
-path = ~/.local/share/vdirsyncer/contacts/contacts
+path = ~/.local/share/vdirsyncer/contacts/default
 readonly = True
 color = "white"
 type = birthdays
@@ -34,4 +34,4 @@ method = fg
 
 [view]
 frame = width
-theme = dark
+theme = light
