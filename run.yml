@@ -15,3 +15,5 @@
     - role: remote_gaming
     - role: config_management
     - role: version_control
+    - role: tasks
+    - role: videoconferencing

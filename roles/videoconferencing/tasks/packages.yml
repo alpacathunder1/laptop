@@ -1,0 +1,9 @@
+---
+- name: Install packages
+  become: false
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - zoom
+    - webex
