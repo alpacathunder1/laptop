@@ -1,0 +1,16 @@
+---
+- name: Install packages
+  become: false
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vorta
+---
+- name: Install packages
+  become: false
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - borgbackup
