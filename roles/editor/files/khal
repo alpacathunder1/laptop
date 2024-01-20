@@ -1,0 +1,37 @@
+[calendars]
+
+[[calendars]]
+path = ~/.local/share/vdirsyncer/calendars/*
+type = discover
+color = white
+
+[[holidays]]
+path = ~/.local/share/vdirsyncer/calendars-ro/holidays
+color = "white"
+readonly = True
+type = discover
+
+[[birthdays]]
+path = ~/.local/share/vdirsyncer/contacts/contacts
+readonly = True
+color = "white"
+type = birthdays
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+firstweekday = 6 
+
+[default]
+highlight_event_days = True
+show_all_days = False
+
+[highlight_days]
+method = fg
+
+[view]
+frame = width
+theme = dark

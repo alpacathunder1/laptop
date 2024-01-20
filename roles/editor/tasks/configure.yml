@@ -1,0 +1,32 @@
+- name: Create vdirsyncer config directory
+  become: false
+  ansible.builtin.file:
+    group: "{{ ansible_group }}"
+    mode: "0755"
+    owner: "{{ ansible_user }}"
+    path: ~/.config/vdirsyncer
+    state: directory
+- name: Create khal config directory
+  become: false
+  ansible.builtin.file:
+    group: "{{ ansible_group }}"
+    mode: "0755"
+    owner: "{{ ansible_user }}"
+    path: ~/.config/khal
+    state: directory
+- name: Copy vdirsyncer config
+  become: false
+  ansible.builtin.template:
+    src: vdirsyncer.j2
+    dest: ~/.config/vdirsyncer/config
+    group: "{{ ansible_group }}"
+    mode: "0644"
+    owner: "{{ ansible_user }}"
+- name: Copy copy khal config
+  become: false
+  ansible.builtin.copy:
+    src: khal
+    dest: ~/.config/khal/config
+    group: "{{ ansible_group }}"
+    mode: "0644"
+    owner: "{{ ansible_user }}"
