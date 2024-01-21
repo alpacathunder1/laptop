@@ -18,6 +18,7 @@
     - ispell
     - vdirsyncer
     - khal
+    - graphviz
 - name: Ensure Doom is present
   ansible.builtin.git:
     repo: https://github.com/hlissner/doom-emacs
