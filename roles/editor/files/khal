@@ -33,5 +33,4 @@ show_all_days = False
 method = fg
 
 [view]
-frame = width
 theme = light
