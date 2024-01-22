@@ -7,6 +7,7 @@
   roles:
     - role: system
     - role: editor
+    - role: remote
     - role: network
     - role: shell
     - role: terminal
