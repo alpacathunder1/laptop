@@ -17,5 +17,5 @@
     - role: config_management
     - role: version_control
     - role: syncing
-    - role: videoconferencing
+    - role: video_conferencing
     - role: virtual_machine_management
