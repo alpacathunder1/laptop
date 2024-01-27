@@ -14,7 +14,7 @@
     - role: browser
     - role: email_client
     - role: backups
-    - role: remote_gaming
+    - role: games
     - role: config_management
     - role: version_control
     - role: syncing
