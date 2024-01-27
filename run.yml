@@ -15,6 +15,7 @@
     - role: email_client
     - role: backups
     - role: games
+    - role: video
     - role: config_management
     - role: version_control
     - role: syncing
