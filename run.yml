@@ -25,3 +25,4 @@
     - role: desktop
     - role: secure
     - role: file_management
+    - role: disk_imaging
