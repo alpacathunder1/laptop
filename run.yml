@@ -21,3 +21,4 @@
     - role: syncing
     - role: communication
     - role: virtual_machine_management
+    - role: archives
