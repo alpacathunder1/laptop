@@ -24,3 +24,4 @@
     - role: archives
     - role: desktop
     - role: secure
+    - role: file_management

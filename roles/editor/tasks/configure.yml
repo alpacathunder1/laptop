@@ -14,6 +14,14 @@
     owner: "{{ ansible_user }}"
     path: ~/.config/khal
     state: directory
+- name: Create neovim config directory
+  become: false
+  ansible.builtin.file:
+    group: "{{ ansible_group }}"
+    mode: "0755"
+    owner: "{{ ansible_user }}"
+    path: ~/.config/nvim
+    state: directory
 - name: Copy vdirsyncer config
   become: false
   ansible.builtin.template:
@@ -22,11 +30,19 @@
     group: "{{ ansible_group }}"
     mode: "0644"
     owner: "{{ ansible_user }}"
-- name: Copy copy khal config
+- name: Copy khal config
   become: false
   ansible.builtin.copy:
     src: khal
     dest: ~/.config/khal/config
+    group: "{{ ansible_group }}"
+    mode: "0644"
+    owner: "{{ ansible_user }}"
+- name: Copy neovim config
+  become: false
+  ansible.builtin.copy:
+    src: nvim
+    dest: ~/.config/nvim/init.vim
     group: "{{ ansible_group }}"
     mode: "0644"
     owner: "{{ ansible_user }}"
