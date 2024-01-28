@@ -22,3 +22,4 @@
     - role: communication
     - role: virtual_machine_management
     - role: archives
+    - role: desktop
