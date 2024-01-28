@@ -5,6 +5,7 @@
     name: "{{ item }}"
     state: present
   with_items:
+    - obsidian
     - railwaycat/emacsmacport/emacs-mac
 - name: Install packages
   become: false
@@ -19,7 +20,6 @@
     - vdirsyncer
     - khal
     - graphviz
-    - obsidian
 - name: Ensure Doom is present
   ansible.builtin.git:
     repo: https://github.com/hlissner/doom-emacs
