@@ -7,6 +7,7 @@
   with_items:
     - obsidian
     - railwaycat/emacsmacport/emacs-mac
+    - mactex
 - name: Install packages
   become: false
   community.general.homebrew:
