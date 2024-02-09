@@ -1,0 +1,8 @@
+---
+- name: Install packages
+  become: false
+  community.general.mas:
+    id:
+      - 462054704 # Word
+      - 462062816 # Powerpoint
+    state: present
