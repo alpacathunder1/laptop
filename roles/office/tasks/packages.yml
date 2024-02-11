@@ -4,5 +4,6 @@
   community.general.mas:
     id:
       - 462054704 # Word
+      - 462058435 # Excel
       - 462062816 # Powerpoint
     state: present
