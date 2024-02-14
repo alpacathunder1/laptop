@@ -1,0 +1,7 @@
+---
+- name: Install packages
+  become: false
+  community.general.mas:
+    id:
+      - 1295203466 # Microsoft Remote Desktop
+    state: present

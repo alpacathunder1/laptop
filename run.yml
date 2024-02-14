@@ -29,3 +29,4 @@
     - role: disk_imaging
     - role: power
     - role: office
+    - role: remote_desktop
