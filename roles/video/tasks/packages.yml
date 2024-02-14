@@ -12,5 +12,4 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - plex-media-server
     - iina
