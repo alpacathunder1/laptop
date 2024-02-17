@@ -30,3 +30,4 @@
     - role: power
     - role: office
     - role: remote_desktop
+    - role: passwords
