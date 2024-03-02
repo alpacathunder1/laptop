@@ -19,7 +19,7 @@
     - role: video
     - role: config_management
     - role: version_control
-    - role: syncing
+    - role: sync
     - role: communication
     - role: virtual_machine_management
     - role: archives
