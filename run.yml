@@ -31,3 +31,4 @@
     - role: office
     - role: remote_desktop
     - role: passwords
+    - role: image_editing

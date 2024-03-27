@@ -1,0 +1,7 @@
+---
+- name: Install packages
+  become: false
+  community.general.mas:
+    id:
+      - 1289583905 # Pixelmator Pro
+    state: present
